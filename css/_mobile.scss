@@ -5,8 +5,14 @@
         padding-right: 16px;
     }
 
-    .top {
-        height: 100vh;
+    .top{
+            height: 100vh;
+        &__price{
+            height: 100vh;
+        }
+        &__catalog{
+            height: 100vh;
+        }
     }
 
     .header {
