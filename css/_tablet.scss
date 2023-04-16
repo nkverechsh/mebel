@@ -4,7 +4,13 @@
         padding-right: calc(50% - 393px);
     }
     .top{
-        height: 100vh;
+            height: 100vh;
+        &__price{
+            height: 100vh;
+        }
+        &__catalog{
+            height: 100vh;
+        }
     }
     .for {
         &__item {
