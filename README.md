@@ -1,1 +1,1 @@
-https://nkverechsh.github.io/mebel/index.html
+Ссылка: https://nkverechsh.github.io/mebel/index.html
