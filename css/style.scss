@@ -1,83 +1,168 @@
-@import "price";
+    @import "price";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-}
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
 
-a {
-    text-decoration: none;
-}
+    a {
+        text-decoration: none;
+    }
 
-.center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
-}
+    .center {
+        padding-left: calc(50% - 600px);
+        padding-right: calc(50% - 600px);
+    }
 
-/* Шапка */
+    /* Шапка */
 
-.top {
-    height: 735px;
-    background-image: url(../img/topbcg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    &__catalog {
-        height: 400px;
-        background-image: url(../img/bcg-catalog.jpg);
+    .top {
+        height: 735px;
+        background-image: url(../img/topbcg.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-    } 
 
-    &__text {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 32px;
-        color: #FFFFFF;
-        margin-bottom: 16px;
-
-    &:hover {
-        scale: 1.005;
+        &__catalog {
+            height: 400px;
+            background-image: url(../img/bcg-catalog.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         } 
+
+        &__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+
+        &:hover {
+            scale: 1.005;
+            } 
+        }
+
+        &__link {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            text-decoration-line: underline;
+            transition: 0.3s;
+
+        &:hover {
+            color: #000000;
+            text-decoration-line: none;
+            }
+        }   
     }
 
-    &__link {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #FFFFFF;
-         text-decoration-line: underline;
-         transition: 0.3s;
+    .header {
+        height: 77px;
+        display: flex;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 16px;
 
-    &:hover {
-        color: #000000;
-        text-decoration-line: none;
+        &__input {
+            width: 288px;
+            height: 41px;
+            border: 1px solid #FFFFFF;
+            border-radius: 20px;
+            background-color: transparent;
+            outline: none;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            padding-left: 32px;
+            padding-right: 32px;
+
+        &::placeholder {
+            color: #FFFFFF;
+            }
         }
-    }   
-}
+    }
 
-.header {
-    height: 77px;
-    display: flex;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 16px;
+    .menu {
+        display: flex;
+        gap: 32px;
 
-    &__input {
+        &__link {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: 0.7s;
+            
+        &:hover {
+                color: #000000;
+                text-decoration: none;
+            }
+        }
+
+        &__mobile {
+            display: none;
+        }  
+    }
+
+    .title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 70px;
+        color: #FFFFFF;
+        padding-top: 64px;
+        padding-bottom: 16px;
+        margin-top: 63px;
+        margin-bottom: 16px;
+        max-width: 792px;
+
+        &:hover {
+            scale: 1.005;
+            }  
+
+        &__catalog {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 70px;
+            color: #FFFFFF;
+            margin-top: 127px;
+            width: 270px;
+
+        &:hover {
+            scale: 1.005;
+            }
+        }
+    }
+
+    // (хлебные крошки) главная / каталог товаров  в "catalog"
+
+    .select {
+        position: relative;
+    }
+
+    .select select {
+        display: block;
+        background-color: transparent;
+        border: none;
+        width: 100%;
         width: 288px;
         height: 41px;
-        border: 1px solid #FFFFFF;
+        border: 1px solid #C4C4C4;
         border-radius: 20px;
         background-color: transparent;
         outline: none;
@@ -85,133 +170,120 @@ a {
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        padding-left: 32px;
-        padding-right: 32px;
-
-    &::placeholder {
-        color: #FFFFFF;
-        }
-    }
-}
-
-.menu {
-    display: flex;
-    gap: 32px;
-
-    &__link {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: #FFFFFF;
-        text-decoration: none;
-        transition: 0.7s;
-        
-    &:hover {
-            color: #000000;
-            text-decoration: none;
-        }
+        color: #000000;
+        padding-left: 14px;
+        padding-right: 33px;
     }
 
-    &__mobile {
-        display: none;
-    }  
-}
-
-.title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 70px;
-    color: #FFFFFF;
-    padding-top: 64px;
-    padding-bottom: 16px;
-    margin-top: 63px;
-    margin-bottom: 16px;
-    max-width: 792px;
-
-    &:hover {
-        scale: 1.005;
-        }  
-
-    &__catalog {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 64px;
-        line-height: 70px;
-        color: #FFFFFF;
-        margin-top: 127px;
-        width: 270px;
-
-    &:hover {
-        scale: 1.005;
-        }
-    }
-}
-
-// (хлебные крошки) главная / каталог товаров  в "catalog"
-
-.select {
-    position: relative;
-}
-
-.select select {
-    display: block;
-    background-color: transparent;
-    border: none;
-    width: 100%;
-    width: 288px;
-    height: 41px;
-    border: 1px solid #C4C4C4;
-    border-radius: 20px;
-    background-color: transparent;
-    outline: none;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-    padding-left: 14px;
-    padding-right: 33px;
-}
-
-.catalog_nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.catalog__nav-link {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 32px;
-    color: #000000;
-    transition: 0.3s;
-
-    &:hover {
-        color: orange;
+    .catalog_nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    &:not(:last-child)::after {
-        content: '/';
+    .catalog__nav-link {
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 32px;
         color: #000000;
-        padding-left: 10px;
-        padding-right: 10px;
+        transition: 0.3s;
+
+        &:hover {
+            color: orange;
+        }
+
+        &:not(:last-child)::after {
+            content: '/';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+            color: #000000;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
-}
 
-// Раздел Мебель для...
+    // Раздел Мебель для...
 
-.for {
-    padding-top: 64px;
+    .for {
+        padding-top: 64px;
 
-    &__head {
+        &__head {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 59px;
+            color: #000000;
+        }
+
+        &__content {
+            display: grid;
+            gap: 31px;
+            grid-template-columns: repeat(12, 1fr);
+            margin-top: 32px;
+        }
+
+        &__item {
+            height: 415px;
+            grid-column: span 4;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 41px;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // Эффект наведения блока - Мебель для...
+
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            
+        &:hover {
+            -moz-box-shadow: 0 0 15px #000;
+            -webkit-box-shadow: 0 0 15px #000;
+            box-shadow:0 0 15px #000; 
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        &_big {
+            grid-column: span 6;
+        }
+
+        &_1 {
+            background-image: url(../img/for-1.jpg);
+        }
+        &_2 {
+            background-image: url(../img/for-2.jpg);
+        }
+        &_3 {
+            background-image: url(../img/for-3.jpg);
+        }
+        &_4 {
+            background-image: url(../img/for-4.jpg);
+        }
+        &_5 {
+            background-image: url(../img/for-5.jpg);
+        }
+        }
+    }
+
+    // Раздел Специальных предложений
+
+    .product-box {
+        margin-top: 64px;
+        margin-bottom: 32px;
+    }
+
+    .heading {
         font-style: normal;
         font-weight: 600;
         font-size: 48px;
@@ -219,348 +291,276 @@ a {
         color: #000000;
     }
 
-    &__content {
-        display: grid;
-        gap: 31px;
-        grid-template-columns: repeat(12, 1fr);
+    .product-content {
         margin-top: 32px;
-    }
-
-    &__item {
-        height: 415px;
-        grid-column: span 4;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 34px;
-        line-height: 41px;
-        color: #FFFFFF;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        // Эффект наведения блока - Мебель для...
-
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        
-    &:hover {
-        -moz-box-shadow: 0 0 15px #000;
-        -webkit-box-shadow: 0 0 15px #000;
-        box-shadow:0 0 15px #000; 
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        transition: all 0.3s ease;
+        column-gap: 32px;
+        row-gap: 56px;
+        flex-wrap: wrap;
     }
 
-    &_big {
-        grid-column: span 6;
-      }
+    // Карточки товаров
 
-    &_1 {
-        background-image: url(../img/for-1.jpg);
-      }
-    &_2 {
-        background-image: url(../img/for-2.jpg);
-      }
-    &_3 {
-        background-image: url(../img/for-3.jpg);
-      }
-    &_4 {
-        background-image: url(../img/for-4.jpg);
-      }
-    &_5 {
-        background-image: url(../img/for-5.jpg);
-      }
+    .product {
+        width: 378px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s;
+        padding: 16px;
+        box-sizing: border-box;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 5px #C4C4C4;
+        }   
+
+        &__img {
+            margin-top: 16px;
+            width: 100%;
+        }
+
+        // Текст в карточках
+
+        &__price_title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-top: 10px;
+            margin-bottom: 9px;
+            transition: 0.5s;
+
+        &:hover {
+            color: #f66d52;
+            }
+        }
+
+        &__price_text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #888888;
+            margin-top: 9px;
+            margin-bottom: 12px;
+        }
+
+        &__box-price {
+            display: flex;
+            gap: 32px;
+        }
+
+        // Цена товара
+
+        &__price_sale {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #050505;
+            margin-top: 12px;
+        }
+
+        // Зачёркнутая цена товара
+
+        &__price_disale {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-decoration-line: line-through;
+            color: #888888;
+            margin-top: 13px;
+        }
+    }  
+
+    .link-box {
+        margin-top: 39px;
+        margin-bottom: 64px;
     }
-}
 
-// Раздел Специальных предложений
-
-.product-box {
-    margin-top: 64px;
-    margin-bottom: 32px;
-}
-
-.heading {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 59px;
-    color: #000000;
-}
-
-.product-content {
-    margin-top: 32px;
-    display: flex;
-    column-gap: 32px;
-    row-gap: 56px;
-    flex-wrap: wrap;
-}
-
-// Карточки товаров
-
-.product {
-    width: 378px;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s;
-    padding: 16px;
-    box-sizing: border-box;
-
-    &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 5px #C4C4C4;
-    }   
-
-    &__img {
-        margin-top: 16px;
-        width: 100%;
-    }
-
-    // Текст в карточках
-
-    &__price_title {
+    .lower__catalogue {
         font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
         color: #000000;
-        margin-top: 10px;
-        margin-bottom: 9px;
-        transition: 0.5s;
+        margin-top: 39px;
+        transition: 0.3s;
 
-    &:hover {
-        color: #f66d52;
+        &:hover {
+            color: #f66d52;
+            text-decoration-line: none;
         }
     }
 
-    &__price_text {
+    .footer {
+        background: #F7F6F6;
+        padding-top: 32px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;    
+
+        &__logo {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            color: #000000;
+        }
+
+        &__content {
+            // min-width: 792px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 177px;
+        }
+
+        &__info {
+            display: flex;
+            gap: 129px;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &__icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &__heading {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+
+        &__item-connect {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+    }
+
+    // Подвал - ссылки:  главная/каталог/корзина
+
+    .socials__line {
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 14px;
         line-height: 17px;
         color: #888888;
-        margin-top: 9px;
+        text-decoration: none;
         margin-bottom: 12px;
+        transition: 0.3s;
+
+        &:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
     }
 
-    &__box-price {
-        display: flex;
-        gap: 32px;
-    }
+    // Ссылки: тел/почта
 
-    // Цена товара
-
-    &__price_sale {
+    .socials {
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        color: #050505;
-        margin-top: 12px;
-    }
-
-    // Зачёркнутая цена товара
-
-    &__price_disale {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        text-decoration-line: line-through;
+        font-size: 14px;
+        line-height: 17px;
         color: #888888;
-        margin-top: 13px;
-    }
-}  
-
-.link-box {
-    margin-top: 39px;
-    margin-bottom: 64px;
-}
-
-.lower__catalogue {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-decoration-line: underline;
-    color: #000000;
-    margin-top: 39px;
-    transition: 0.3s;
-
-    &:hover {
-        color: #f66d52;
-        text-decoration-line: none;
-    }
-}
-
-.footer {
-    background: #F7F6F6;
-    padding-top: 32px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;    
-
-    &__logo {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 44px;
-        color: #000000;
+        text-decoration: none;
+        transition: 0.3s;
     }
 
-    &__content {
-        // min-width: 792px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 177px;
+    .socials:hover {
+        color: orange;
     }
 
-    &__info {
-        display: flex;
-        gap: 129px;
-    }
+    // Футер увеличение значков
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
+    .footer__icons_zoom {
+        transition: 0.3s;
 
-    &__icons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-    }
-
-    &__form {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    &__heading {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        color: #000000;
-        margin-bottom: 12px;
-    }
-
-    &__item-connect {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        color: #000000;
-        margin-bottom: 12px;
-    }
-}
-
-// Подвал - ссылки:  главная/каталог/корзина
-
-.socials__line {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #888888;
-    text-decoration: none;
-    margin-bottom: 12px;
-    transition: 0.3s;
-
-    &:hover {
-        color: #000000;
-        text-decoration: underline;
-    }
-}
-
-// Ссылки: тел/почта
-
-.socials {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #888888;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.socials:hover {
-    color: orange;
-}
-
-// Футер увеличение значков
-
-.footer__icons_zoom {
-    transition: 0.3s;
-
-    &:hover {
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
-    }
-}   
-
-// Блок подписки на новости
-
-.form__text {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-    margin-bottom: 15px;
-}
-
-.mail_send {
-    width: 275px;
-    height: 46px;
-    background: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    box-sizing: border-box;
-    border-radius: 20px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
-    padding-left: 25px;
-    padding-right: 25px;
-    width: 275px;
-    height: 46px;
-    margin-bottom: 12px;
-
-    &::placeholder {
-        color: #C4C4C4;
+        &:hover {
+            -webkit-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            transform: scale(1.3);
+        }
     }   
-}
 
-.success_send {
-    background: rgba(222, 215, 215, 0.41);
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 20px;
-    width: 275px;
-    height: 46px;
-    font-size: 15px;
-    line-height: 18px;
-    color: #000000;
-    margin-bottom: 16px;
-    transition: 0.7s;
+    // Блок подписки на новости
 
-    &:hover {
-        background: #000000;
-        color: #FFFFFF;
+    .form__text {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+        margin-bottom: 15px;
     }
-}
 
-@import "tablet";
-@import "mobile";
+    .mail_send {
+        width: 275px;
+        height: 46px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 275px;
+        height: 46px;
+        margin-bottom: 12px;
+
+        &::placeholder {
+            color: #C4C4C4;
+        }   
+    }
+
+    .success_send {
+        background: rgba(222, 215, 215, 0.41);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 275px;
+        height: 46px;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+        margin-bottom: 16px;
+        transition: 0.7s;
+
+        &:hover {
+            background: #000000;
+            color: #FFFFFF;
+        }
+    }
+
+    @import "tablet";
+    @import "mobile";
